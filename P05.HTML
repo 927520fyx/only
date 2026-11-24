@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Check TrollStore iOS compatibility, supported iOS versions, device requirements, and important limitations before considering TrollStore for your iPhone or iPad.">
-    <title>TrollStore iOS Compatibility: Supported iOS Versions</title>
+    <meta name="description" content="Check TrollStore iOS and iPadOS compatibility, supported versions from iOS 14.0 beta 2 to 17.0, the iOS 16.7 RC (20H18) exception, device architecture, and installation availability.">
+    <title>TrollStore iOS Compatibility: Supported iOS Versions and Requirements</title>
     <style>
         :root {
             --primary-color: #007AFF;
@@ -223,8 +223,7 @@
 <body>
 
     <!--
-    Meta Title: TrollStore iOS Compatibility: Supported iOS Versions
-    Meta Description: Check TrollStore iOS compatibility, supported iOS versions, device requirements, and important limitations before considering TrollStore for your iPhone or iPad.
+    Title: TrollStore iOS Compatibility: Supported iOS Versions and Requirements
     Suggested URL: /trollstore-ios-compatibility/
     -->
 
@@ -233,26 +232,25 @@
     </header>
 
     <main class="container">
-        <!-- TrollStore iOS Compatibility: Which iOS Versions Are Supported? -->
-        <section id="which-ios-versions">
-            <h2>TrollStore iOS Compatibility: Which iOS Versions Are Supported?</h2>
-            <p>TrollStore is a popular application installation tool for compatible iPhone and iPad devices. Unlike conventional app installation methods, it uses specific vulnerabilities in Apple's CoreTrust code-signing system to provide persistent app signing.</p>
-            <p>However, TrollStore does not work on every iOS version. Its compatibility depends primarily on the installed iOS or iPadOS version, the device architecture, and the availability of a compatible installation method.</p>
-            <p>If you are wondering whether TrollStore works on iOS 15, iOS 16, iOS 17, or newer versions, this guide explains the supported firmware ranges, compatibility limitations, and important requirements.</p>
-            <p>Before making any decisions, check your exact iOS version rather than relying only on your iPhone model.</p>
+        <!-- Introduction -->
+        <section>
+            <p>TrollStore does not work on every iPhone or iPad. Its compatibility depends mainly on the installed iOS or iPadOS version, the exact firmware build in certain cases, and the device's hardware architecture.</p>
+            <p>The official TrollStore project documents support for iOS 14.0 beta 2 through iOS 16.6.1, iOS 16.7 RC (Build 20H18), and iOS 17.0. Later releases such as iOS 16.7 final and iOS 17.0.1 are outside the supported range.</p>
+            <p>This guide explains which iOS versions are compatible with TrollStore, why some firmware releases are excluded, and why a supported iOS version does not automatically guarantee that every device has the same available installation options.</p>
+            <p>If you are checking TrollStore compatibility, start with your exact software version rather than relying only on your iPhone or iPad model.</p>
         </section>
 
         <!-- Table of Contents -->
         <nav class="toc" aria-label="Table of Contents">
             <div class="toc-title">Table of Contents</div>
             <ul>
-                <li><a href="#which-ios-versions">Which iOS Versions Are Supported?</a></li>
                 <li><a href="#what-ios-versions">What iOS Versions Does TrollStore Support?</a></li>
                 <li><a href="#compatibility-by-version">TrollStore Compatibility by iOS Version</a></li>
+                <li><a href="#16-7-rc-build">Why Does the iOS 16.7 RC Build Number Matter?</a></li>
                 <li><a href="#compatibility-requirements">TrollStore Compatibility Requirements</a></li>
-                <li><a href="#check-ios-version">How to Check Your iOS Version</a></li>
+                <li><a href="#check-ios-build">How to Check Your iOS Version and Build Number</a></li>
                 <li><a href="#why-not-every-version">Why Is TrollStore Not Compatible With Every iOS Version?</a></li>
-                <li><a href="#unsupported-version">What If Your iOS Version Is Unsupported?</a></li>
+                <li><a href="#not-supported">What If Your iOS Version Is Not Supported?</a></li>
                 <li><a href="#faq">Frequently Asked Questions</a></li>
                 <li><a href="#final-thoughts">Final Thoughts</a></li>
             </ul>
@@ -261,136 +259,174 @@
         <!-- What iOS Versions Does TrollStore Support? -->
         <section id="what-ios-versions">
             <h2>What iOS Versions Does TrollStore Support?</h2>
-            <p>TrollStore has a limited compatibility range because its functionality depends on specific CoreTrust vulnerabilities.</p>
-            <p>According to the official TrollStore project, the documented supported versions are:</p>
+            <p>According to the official TrollStore repository, the documented compatibility range includes the following versions:</p>
             <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
                             <th>iOS / iPadOS Version</th>
                             <th>Compatibility Status</th>
+                            <th>Important Details</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>iOS 14.0 beta 2 – 14.8.1</strong></td>
-                            <td>Supported</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iOS 15.x</strong></td>
-                            <td>Supported on applicable versions</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iOS 16.0 – 16.6.1</strong></td>
-                            <td>Supported</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iOS 16.7 RC (20H18)</strong></td>
-                            <td>Supported</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iOS 16.7 final and later releases</strong></td>
+                            <td><code>iOS 14.0 beta 1 and earlier</code></td>
                             <td>Not supported</td>
+                            <td>Outside the documented range</td>
                         </tr>
                         <tr>
-                            <td><strong>iOS 17.0</strong></td>
+                            <td><code>iOS 14.0 beta 2 – 14.8.1</code></td>
                             <td>Supported</td>
+                            <td>Included in the official compatibility range</td>
                         </tr>
                         <tr>
-                            <td><strong>iOS 17.0.1 and later</strong></td>
+                            <td><code>iOS 15.x</code></td>
+                            <td>Supported</td>
+                            <td>Installation options vary by version and device</td>
+                        </tr>
+                        <tr>
+                            <td><code>iOS 16.0 – 16.6.1</code></td>
+                            <td>Supported</td>
+                            <td>Included in the official compatibility range</td>
+                        </tr>
+                        <tr>
+                            <td><code>iOS 16.7 RC</code></td>
+                            <td>Supported</td>
+                            <td>Build 20H18 only</td>
+                        </tr>
+                        <tr>
+                            <td><code>iOS 16.7 final and later 16.7.x releases</code></td>
                             <td>Not supported</td>
+                            <td>The supported RC exception does not apply to public releases</td>
                         </tr>
                         <tr>
-                            <td><strong>iOS 18 and later</strong></td>
-                            <td>Not supported by the documented TrollStore CoreTrust vulnerabilities</td>
+                            <td><code>iOS 17.0</code></td>
+                            <td>Supported</td>
+                            <td>Initial 17.0 release</td>
+                        </tr>
+                        <tr>
+                            <td><code>iOS 17.0.1 and later</code></td>
+                            <td>Not supported</td>
+                            <td>Outside the documented compatibility range</td>
+                        </tr>
+                        <tr>
+                            <td><code>iOS 18 and later</code></td>
+                            <td>Not officially supported</td>
+                            <td>Not included in the documented TrollStore compatibility range</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="warning-box">
-                <p><strong>Important:</strong> Compatibility does not automatically mean that every installation method works on every device. The exact firmware build and device architecture can affect which installation options are available.</p>
+                <p><strong>Important:</strong> This table describes TrollStore's documented firmware compatibility. It does not mean that every supported version has the same installation options or that every device can use the same method.</p>
             </div>
-            <p>Always check the official project documentation for the latest compatibility information.</p>
+            <div class="callout">
+                <p>For the original compatibility information, refer to the official project:<br>
+                <a href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer">https://github.com/opa334/TrollStore</a></p>
+            </div>
         </section>
 
         <!-- TrollStore Compatibility by iOS Version -->
         <section id="compatibility-by-version">
             <h2>TrollStore Compatibility by iOS Version</h2>
-            <p>Understanding the differences between iOS releases is important because even small firmware updates can change compatibility.</p>
+            <p>Different iOS releases can have different compatibility results, even when their version numbers look very similar.</p>
+            <p>The following sections explain the most important version distinctions.</p>
+
+            <h3>TrollStore on iOS 14</h3>
+            <p>TrollStore's documented support begins with iOS 14.0 beta 2.</p>
+            <p>The supported range continues through iOS 14.8.1.</p>
+            <p>Devices running iOS 14.0 beta 1 or earlier are outside this range.</p>
+            <p>Although these versions belong to the same major iOS generation, the exact release matters when evaluating compatibility.</p>
 
             <h3>TrollStore on iOS 15</h3>
-            <p>TrollStore supports applicable iOS 15 versions.</p>
-            <p>However, support can vary depending on the specific firmware build and device architecture. Not every iOS 15 installation necessarily has the same installation options.</p>
-            <p>When checking iOS 15 compatibility, consider:</p>
-            <ul>
-                <li>The exact iOS version installed on the device.</li>
-                <li>The device's processor architecture.</li>
-                <li>Whether a compatible installation method exists.</li>
-                <li>Whether the selected installation documentation matches the firmware.</li>
-            </ul>
-            <p>Do not assume that all iOS 15 devices have identical compatibility.</p>
+            <p>iOS 15 is included in TrollStore's documented compatibility range.</p>
+            <p>However, compatibility should not be confused with identical installation-method availability.</p>
+            <p>Different iOS 15 releases and device architectures may have different available options. The official installation compatibility guide separates these combinations rather than treating every iOS 15 device as identical.</p>
+            <p>When reviewing an iOS 15 device, consider both its exact software version and its hardware architecture.</p>
 
             <h3>TrollStore on iOS 16</h3>
-            <p>TrollStore supports iOS 16.0 through iOS 16.6.1, as well as one specific iOS 16.7 release candidate.</p>
-            <p>There is an important distinction between iOS 16.7 RC and the public iOS 16.7 release.</p>
-            <p>The supported release candidate is identified by build number <code>20H18</code>. Other iOS 16.7 releases are outside the documented compatibility range.</p>
-            <p>This distinction matters because two devices may both display an iOS 16.7 version while running different firmware builds.</p>
-            <p>Therefore, checking the exact build number can be important when evaluating compatibility.</p>
+            <p>TrollStore supports iOS 16.0 through iOS 16.6.1.</p>
+            <p>There is also one important exception involving iOS 16.7 RC.</p>
+            <p>The distinction between iOS 16.7 RC and the public iOS 16.7 release is essential. They should not be treated as the same compatibility entry.</p>
+
+            <h4>Is iOS 16.7 Compatible With TrollStore?</h4>
+            <p>Only the specific iOS 16.7 Release Candidate identified by Build Number <code>20H18</code> is included in the documented support range.</p>
+            <p>The public iOS 16.7 release and later 16.7.x releases are not included.</p>
+            <p>This is why checking the exact firmware build can matter more than looking at the displayed version number alone.</p>
 
             <h3>TrollStore on iOS 17</h3>
-            <p>TrollStore supports iOS 17.0, but this support does not extend to later iOS 17 releases.</p>
-            <p>The distinction is:</p>
+            <p>TrollStore supports iOS 17.0.</p>
+            <p>This support does not extend to iOS 17.0.1 or later releases.</p>
+            <p>The distinction is important:</p>
             <ul>
-                <li><strong>iOS 17.0:</strong> Supported.</li>
-                <li><strong>iOS 17.0.1 and later:</strong> Not supported by the documented CoreTrust vulnerabilities.</li>
+                <li><strong>iOS 17.0:</strong> Included in the documented support range.</li>
+                <li><strong>iOS 17.0.1 and later:</strong> Not supported by the documented TrollStore compatibility mechanism.</li>
             </ul>
-            <p>A device running iOS 17.0 should not be considered equivalent to one running iOS 17.0.1 or iOS 17.1.</p>
-            <p>The exact installed version matters.</p>
+            <p>A device running iOS 17.0 should therefore not be treated as equivalent to one running iOS 17.0.1 or a later iOS 17 release.</p>
 
-            <h3>TrollStore on iOS 18</h3>
-            <p>TrollStore does not officially support iOS 18 through its established CoreTrust vulnerabilities.</p>
-            <p>Although users may encounter websites claiming compatibility with newer firmware, these claims should not be confused with official TrollStore support.</p>
-            <p>Always distinguish the original TrollStore project from unrelated tools or applications using similar names.</p>
+            <h3>TrollStore on iOS 18 and Newer Versions</h3>
+            <p>iOS 18 and newer major iOS releases are not included in the official TrollStore compatibility range documented by the project.</p>
+            <p>You may encounter websites advertising TrollStore compatibility with newer firmware versions. However, a search result or third-party claim is not proof of official support.</p>
+            <p>It is important to distinguish the original TrollStore project from unrelated applications or tools that use similar names.</p>
+            <p>For an accurate compatibility check, use the original repository rather than relying on an unsupported claim.</p>
+        </section>
 
-            <h3>TrollStore on iOS 26 and iOS 27</h3>
-            <p>Searches for TrollStore on iOS 26 and iOS 27 may appear in keyword research, but search demand does not establish technical compatibility.</p>
-            <p>The documented TrollStore compatibility range does not include iOS 26 or iOS 27.</p>
-            <p>Users should not assume that a newer iOS version is supported simply because a website advertises an installation option.</p>
-            <p>Check the official project documentation before trusting any compatibility claim.</p>
+        <!-- Why Does the iOS 16.7 RC Build Number Matter? -->
+        <section id="16-7-rc-build">
+            <h2>Why Does the iOS 16.7 RC Build Number Matter?</h2>
+            <p>The iOS 16.7 RC exception is one of the most important details in TrollStore compatibility.</p>
+            <p>The official project specifically identifies:</p>
+            <div class="callout">
+                <p><strong>iOS 16.7 RC</strong><br>
+                <strong>Build Number:</strong> <code>20H18</code></p>
+            </div>
+            <p>This does not mean that every iOS 16.7 installation is supported.</p>
+            <p>A Release Candidate and a public release can have different build identifiers and underlying system changes. Therefore, the version label alone may not provide enough information to identify the supported exception.</p>
+            <p>If your device displays iOS 16.7, do not automatically assume that it is the supported RC build.</p>
+            <p>The exact build number must match the documented exception.</p>
         </section>
 
         <!-- TrollStore Compatibility Requirements -->
         <section id="compatibility-requirements">
             <h2>TrollStore Compatibility Requirements</h2>
-            <p>TrollStore compatibility involves more than checking the iOS version.</p>
-            <p>Several technical factors determine whether a particular device and firmware combination is supported.</p>
+            <p>Checking the iOS version is the first step, but it is not the only factor involved in compatibility.</p>
+            <p>There are three important concepts to understand.</p>
 
-            <h3>1. Supported iOS or iPadOS Version</h3>
-            <p>The installed operating system must fall within a supported firmware range.</p>
-            <p>This is the most important initial compatibility check.</p>
-            <p>A compatible iPhone model running unsupported firmware does not automatically become compatible with TrollStore.</p>
+            <h3>1. Supported Firmware Version</h3>
+            <p>The installed iOS or iPadOS version must fall within TrollStore's documented support range.</p>
+            <p>A device running a newer unsupported version does not become compatible simply because it has a supported iPhone model.</p>
+            <p>Firmware compatibility is the first requirement to evaluate.</p>
 
             <h3>2. Device Architecture</h3>
-            <p>Different iPhone and iPad models use different processor architectures.</p>
-            <p>TrollStore installation methods may have different requirements depending on whether a device uses an <code>arm64</code> or <code>arm64e</code> architecture.</p>
-            <p>Consequently, firmware compatibility and installation-method compatibility should be evaluated separately.</p>
+            <p>Different Apple devices use different processor architectures.</p>
+            <p>The TrollStore installation compatibility guide distinguishes between:</p>
+            <ul>
+                <li><code>arm64</code>: Used by certain earlier Apple devices.</li>
+                <li><code>arm64e</code>: Used by newer Apple devices.</li>
+            </ul>
+            <p>These architecture differences matter because the available installation options are not identical across all device and firmware combinations.</p>
+            <p>A supported iOS version alone does not tell you which options are available for a particular device.</p>
 
-            <h3>3. Compatible Installation Method</h3>
-            <p>Not every supported firmware version has the same installation options.</p>
-            <p>The available method may depend on the firmware version, device architecture, and existing system configuration.</p>
-            <p>A device can fall within TrollStore's supported firmware range while still lacking a suitable installation path under its current circumstances.</p>
-
-            <h3>4. Exact Firmware Build</h3>
-            <p>Some compatibility exceptions apply to a specific firmware build rather than an entire version family.</p>
-            <p>The iOS 16.7 RC build <code>20H18</code> is an important example.</p>
-            <p>This is why checking only the major iOS version may not provide enough information.</p>
+            <h3>3. Installation-Method Availability</h3>
+            <p>Firmware support and installation-method availability are related, but they are not the same thing.</p>
+            <p>A device may run a supported iOS version while having different available installation options from another device running the same version.</p>
+            <p>The available options can depend on:</p>
+            <ul>
+                <li>The exact iOS or iPadOS version.</li>
+                <li>The device's processor architecture.</li>
+                <li>The specific firmware build.</li>
+                <li>The requirements of the relevant installation documentation.</li>
+            </ul>
+            <p>For this reason, avoid describing TrollStore compatibility as a simple list of supported iPhone models.</p>
+            <p>The combination of software version and device hardware is more informative.</p>
         </section>
 
-        <!-- How to Check Your iOS Version -->
-        <section id="check-ios-version">
-            <h2>How to Check Your iOS Version</h2>
-            <p>Before evaluating TrollStore compatibility, identify the operating system version installed on your device.</p>
-            <p>On an iPhone or iPad, you can find this information in the device settings.</p>
+        <!-- How to Check Your iOS Version and Build Number -->
+        <section id="check-ios-build">
+            <h2>How to Check Your iOS Version and Build Number</h2>
+            <p>Before evaluating TrollStore compatibility, identify the exact software version installed on your device.</p>
+            <p>On an iPhone or iPad:</p>
             <ol>
                 <li>Open <strong>Settings</strong>.</li>
                 <li>Select <strong>General</strong>.</li>
@@ -398,35 +434,35 @@
                 <li>Find the <strong>iOS Version</strong> or <strong>Software Version</strong> entry.</li>
                 <li>Record the displayed version.</li>
             </ol>
-            <p>You should also identify your exact device model.</p>
-            <p>These two pieces of information provide a useful starting point for checking compatibility.</p>
-            <p>Remember that a compatible firmware version does not guarantee that every installation method is available.</p>
+            <p>You should also identify your device model.</p>
+            <p>For cases involving a specific firmware exception, such as iOS 16.7 RC, the build number is important as well.</p>
+            <p>Checking these details helps prevent common mistakes, such as treating iOS 16.7 RC as equivalent to the public iOS 16.7 release.</p>
         </section>
 
         <!-- Why Is TrollStore Not Compatible With Every iOS Version? -->
         <section id="why-not-every-version">
             <h2>Why Is TrollStore Not Compatible With Every iOS Version?</h2>
-            <p>TrollStore relies on specific vulnerabilities in Apple's CoreTrust code-signing infrastructure.</p>
-            <p>CoreTrust is part of the system responsible for validating application signatures.</p>
-            <p>Apple has addressed the vulnerabilities used by TrollStore in later firmware releases.</p>
-            <p>As a result, the original compatibility mechanism does not extend indefinitely to newer iOS versions.</p>
-            <p>This explains why TrollStore has a relatively narrow firmware support range.</p>
-            <p>It also explains why installing a newer iOS release can affect the availability of TrollStore functionality.</p>
+            <p>TrollStore relies on vulnerabilities in Apple's CoreTrust code-signing system.</p>
+            <p>CoreTrust is involved in validating application code signatures. The vulnerabilities used by TrollStore allow the project to provide its distinctive persistent application-signing behavior on specific operating system versions.</p>
+            <p>Apple addressed the relevant vulnerabilities in later firmware releases.</p>
+            <p>As a result, the compatibility mechanism used by TrollStore does not extend to every newer iOS version.</p>
+            <p>This explains why the supported range is limited and why a small software update can make a significant difference.</p>
+            <p>It also explains why downloading a different TrollStore package cannot independently make an unsupported iOS version compatible.</p>
         </section>
 
-        <!-- What If Your iOS Version Is Unsupported? -->
-        <section id="unsupported-version">
-            <h2>What If Your iOS Version Is Unsupported?</h2>
-            <p>If your device runs an unsupported iOS version, you should not assume that changing the installation application or using a different download package will make the original TrollStore compatible.</p>
-            <p>The compatibility limitation is related to the underlying operating system security mechanisms, not simply the application installer interface.</p>
-            <p>Keep these points in mind:</p>
+        <!-- What If Your iOS Version Is Not Supported? -->
+        <section id="not-supported">
+            <h2>What If Your iOS Version Is Not Supported?</h2>
+            <p>If your device is running an iOS version outside the documented compatibility range, do not assume that a different download or a different application package will change the result.</p>
+            <p>The limitation is related to the operating system's underlying security behavior, not simply the name or format of the downloaded file.</p>
+            <p>Keep these distinctions in mind:</p>
             <ul>
-                <li>A different iPhone model does not automatically solve an unsupported firmware limitation.</li>
-                <li>An IPA download does not change the device's operating system compatibility.</li>
-                <li>Third-party websites may advertise features that are not part of the official TrollStore project.</li>
-                <li>Compatibility claims should be checked against the original project's documentation.</li>
+                <li>A supported iPhone model does not guarantee firmware compatibility.</li>
+                <li>An IPA file does not change the installed iOS version.</li>
+                <li>A supported firmware version does not guarantee that every installation option is available.</li>
+                <li>A third-party compatibility claim does not establish official project support.</li>
             </ul>
-            <p>For accurate information, refer to the official TrollStore repository and its release notes.</p>
+            <p>The most reliable reference is the original TrollStore documentation.</p>
         </section>
 
         <!-- Frequently Asked Questions -->
@@ -435,74 +471,84 @@
 
             <div class="faq-item">
                 <h3>1. What iOS versions does TrollStore support?</h3>
-                <p>The documented compatibility range includes iOS/iPadOS 14.0 beta 2 through 16.6.1, iOS 16.7 RC build 20H18, and iOS 17.0.</p>
+                <p>The official project documents support for iOS 14.0 beta 2 through iOS 16.6.1, iOS 16.7 RC (Build 20H18), and iOS 17.0.</p>
             </div>
 
             <div class="faq-item">
-                <h3>2. Does TrollStore work on iOS 18?</h3>
-                <p>No. iOS 18 is outside the documented compatibility range of the original TrollStore CoreTrust vulnerabilities.</p>
+                <h3>2. Does TrollStore work on iOS 15?</h3>
+                <p>Yes. iOS 15 is within the documented compatibility range. However, available installation options can differ depending on the exact version and device architecture.</p>
             </div>
 
             <div class="faq-item">
-                <h3>3. Does TrollStore work on iOS 26?</h3>
-                <p>No official support for iOS 26 is documented in the original TrollStore compatibility range.</p>
+                <h3>3. Does TrollStore work on iOS 16?</h3>
+                <p>Yes. The documented range includes iOS 16.0 through iOS 16.6.1, as well as the specific iOS 16.7 RC build 20H18.</p>
+                <p>The public iOS 16.7 release is not included.</p>
             </div>
 
             <div class="faq-item">
-                <h3>4. Does TrollStore work on iOS 27?</h3>
-                <p>The documented compatibility range does not include iOS 27.</p>
+                <h3>4. Is iOS 16.7 compatible with TrollStore?</h3>
+                <p>Only iOS 16.7 RC with Build Number <code>20H18</code> is included in the supported range.</p>
+                <p>The public iOS 16.7 release and later 16.7.x versions are not supported.</p>
             </div>
 
             <div class="faq-item">
-                <h3>5. Is iOS 17 compatible with TrollStore?</h3>
-                <p>Only iOS 17.0 is included in the documented supported range. iOS 17.0.1 and later releases are not supported by the original compatibility mechanism.</p>
+                <h3>5. Does TrollStore work on iOS 17?</h3>
+                <p>TrollStore supports iOS 17.0.</p>
+                <p>It does not support iOS 17.0.1 or later releases through the documented compatibility mechanism.</p>
             </div>
 
             <div class="faq-item">
-                <h3>6. Is iOS 16.7 compatible with TrollStore?</h3>
-                <p>Only the specific iOS 16.7 RC build 20H18 is supported. Public iOS 16.7 releases are not included.</p>
+                <h3>6. Does TrollStore work on iOS 18?</h3>
+                <p>No official TrollStore compatibility is documented for iOS 18.</p>
+                <p>The original project's supported firmware range does not include this release.</p>
             </div>
 
             <div class="faq-item">
-                <h3>7. Does TrollStore work on every iPhone?</h3>
-                <p>No. Both the installed firmware and the device's technical characteristics matter. A compatible device model alone does not guarantee support.</p>
+                <h3>7. Does TrollStore work on newer iOS versions?</h3>
+                <p>Newer major iOS releases are outside the documented compatibility range.</p>
+                <p>Always check the original project documentation before trusting claims made by third-party websites.</p>
             </div>
 
             <div class="faq-item">
-                <h3>8. Does TrollStore require a jailbreak?</h3>
-                <p>TrollStore does not require a traditional jailbreak for its supported non-jailbroken installation paths. However, installation requirements vary by firmware and device configuration.</p>
+                <h3>8. Does TrollStore work on every iPhone?</h3>
+                <p>No. Compatibility depends on the installed firmware, and installation options can also vary by device architecture.</p>
+                <p>An iPhone model alone is not enough to determine compatibility.</p>
             </div>
 
             <div class="faq-item">
-                <h3>9. Can a newer iOS update make TrollStore incompatible?</h3>
-                <p>Yes. Updating to an unsupported firmware version can remove the compatibility conditions TrollStore depends on.</p>
+                <h3>9. Does a compatible iOS version guarantee that TrollStore can be installed?</h3>
+                <p>No. Firmware compatibility and installation-method availability are separate considerations.</p>
+                <p>A device can run a supported version while having different available options from another device with a different architecture or firmware build.</p>
             </div>
 
             <div class="faq-item">
                 <h3>10. How can I check whether my device is compatible?</h3>
-                <p>Start by checking the exact iOS version and device model in <code>Settings &gt; General &gt; About</code>. Then compare the information with the official TrollStore documentation.</p>
+                <p>Start by checking the iOS version, device model, and relevant build number in Settings.</p>
+                <p>Then compare those details with the official TrollStore compatibility information and the applicable device-specific documentation.</p>
             </div>
         </section>
 
         <!-- Final Thoughts -->
         <section id="final-thoughts">
             <h2>Final Thoughts</h2>
-            <p>TrollStore iOS compatibility is determined by specific operating system vulnerabilities, firmware builds, and device requirements.</p>
-            <p>Although TrollStore supports several older iOS and iPadOS versions, it is not a universal application installer for every iPhone or iPad.</p>
-            <p>The most important points to remember are:</p>
+            <p>TrollStore compatibility depends on specific iOS and iPadOS versions rather than simply the age or model of an iPhone or iPad.</p>
+            <p>The most important points are:</p>
             <ul>
-                <li>Check your exact iOS version before evaluating compatibility.</li>
-                <li>Distinguish iOS 17.0 from later iOS 17 releases.</li>
-                <li>Pay attention to the special iOS 16.7 RC build requirement.</li>
-                <li>Do not confuse device compatibility with installation-method availability.</li>
-                <li>Verify all compatibility information against the official project.</li>
+                <li>iOS 14.0 beta 2 through iOS 16.6.1 are within the documented support range.</li>
+                <li>iOS 16.7 RC is supported only with Build Number <code>20H18</code>.</li>
+                <li>The public iOS 16.7 release and later 16.7.x versions are not supported.</li>
+                <li>iOS 17.0 is supported, but iOS 17.0.1 and later are not.</li>
+                <li>iOS 18 and newer versions are outside the documented compatibility range.</li>
+                <li>Device architecture and installation-method availability should be considered separately from firmware support.</li>
             </ul>
-            <p>Understanding these limitations helps users avoid misleading compatibility claims and make more informed decisions about their devices.</p>
+            <p>Before relying on a compatibility claim, check the exact software version and consult the original project documentation.</p>
+            <div class="callout">
+                <p><strong>Official TrollStore Repository:</strong> <a href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer">https://github.com/opa334/TrollStore</a></p>
+                <p><strong>TrollStore Installation Compatibility Guide:</strong> <a href="https://ios.cfw.guide/installing-trollstore/" target="_blank" rel="noopener noreferrer">https://ios.cfw.guide/installing-trollstore/</a></p>
+            </div>
+            <p>Understanding these differences makes it easier to identify genuine compatibility information and avoid confusing firmware support with device-specific installation availability.</p>
         </section>
     </main>
 
 </body>
 </html>
-```[cite: 8]
-
-直接保存为 `.html` 文件即可；截至目前这五篇同系列文章都已经按统一样式整理完毕，如果还有后续文稿需要转换，随时发给我。
