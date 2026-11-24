@@ -21,7 +21,7 @@
     <meta name="twitter:description" content="Learn how TrollStore works on iOS, supported versions, key features, safety considerations, and answers to common questions.">
     <meta name="twitter:image" content="https://927520fyx.github.io/only/og-image.png">
 
-    <!-- Structured Data: Article, FAQPage & BreadcrumbList -->
+    <!-- Structured Data: Article & FAQPage -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -103,23 +103,6 @@
               }
             }
           ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://927520fyx.github.io/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "What Is TrollStore?",
-              "item": "https://927520fyx.github.io/only/"
-            }
-          ]
         }
       ]
     }
@@ -175,25 +158,6 @@
             padding: 2.5rem 2.5rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-        }
-
-        .breadcrumb {
-            font-size: 0.88rem;
-            color: #6e6e73;
-            margin-bottom: 1.2rem;
-        }
-
-        .breadcrumb a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-
-        .breadcrumb span {
-            margin: 0 0.35rem;
         }
 
         h2 {
@@ -349,12 +313,6 @@
     </header>
 
     <main class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="https://927520fyx.github.io/">Home</a>
-            <span>&rsaquo;</span>
-            <span>What Is TrollStore?</span>
-        </nav>
-
         <!-- Introduction -->
         <section>
             <p>TrollStore is a popular iOS application that allows users to install IPA apps permanently on supported iPhone and iPad devices. Unlike traditional sideloading methods that often require applications to be re-signed periodically, TrollStore uses a specific iOS code-signing vulnerability to install apps without the usual signing expiration.</p>
