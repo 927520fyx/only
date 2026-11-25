@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Check which iPhone and iPad models can run TrollStore. Clear list by chip architecture (A8–A11 vs A12+), plus what really determines compatibility.">
-    <title>TrollStore Supported Devices: iPhone &amp; iPad Compatibility List (by Chip)</title>
+    <meta name="description" content="See which iPhone and iPad models can use TrollStore based on chip architecture (A8–A11 vs A12+). Clear device list and compatibility grouping by processor.">
+    <title>TrollStore Supported Devices: iPhone &amp; iPad Models by Chip Architecture</title>
     <style>
         :root {
             --primary-color: #007AFF;
@@ -99,7 +99,7 @@
             color: #1d1d1f;
         }
 
-        ul, ol {
+        ul {
             margin-top: 0.5rem;
             margin-bottom: 1.2rem;
             padding-left: 1.5rem;
@@ -198,18 +198,34 @@
             padding-bottom: 0;
         }
 
-        .faq-item h3 {
-            color: var(--text-main);
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+        .device-group {
+            margin-bottom: 1.8rem;
         }
 
-        @media (max-width: 640px) {
+        .device-group h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .device-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.3rem 1.5rem;
+            margin: 0.8rem 0 1.2rem;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .device-list li {
+            padding: 0.35rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
             .container {
-                margin: 0;
-                border-radius: 0;
                 padding: 1.5rem 1.2rem;
+                margin: -1rem 0.8rem 2rem;
             }
             header h1 {
                 font-size: 1.6rem;
@@ -217,281 +233,196 @@
             .toc ul {
                 columns: 1;
             }
+            .device-list {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>TrollStore Supported Devices: Which iPhone and iPad Models Work?</h1>
+        <h1>TrollStore Supported Devices: iPhone and iPad Models by Chip Architecture</h1>
     </header>
 
     <main class="container">
-        <!-- Introduction -->
-        <section>
-            <p>TrollStore does not publish an official “supported devices” list. Instead, compatibility depends on two main factors: the device’s chip architecture and the installed iOS/iPadOS version.</p>
-            <p>This page focuses on device models and chip architecture. For the exact supported iOS versions, see the dedicated <a href="/trollstore-ios-compatibility/">TrollStore iOS Compatibility</a> page.</p>
-        </section>
+        <p>TrollStore compatibility is closely related to the device’s chip architecture. Different iPhone and iPad models use different processors, which fall into two main groups: <strong>arm64 (A8–A11)</strong> and <strong>arm64e (A12 and newer)</strong>.</p>
+        <p>This page focuses only on <strong>device models and their chip architecture</strong>. It helps you quickly identify which group your iPhone or iPad belongs to.</p>
 
-        <!-- Table of Contents -->
         <nav class="toc" aria-label="Table of Contents">
             <div class="toc-title">Table of Contents</div>
             <ul>
-                <li><a href="#by-chip-architecture">1. TrollStore Compatibility by Chip Architecture</a></li>
-                <li><a href="#iphone-compatibility">2. iPhone Models Compatibility Overview</a></li>
-                <li><a href="#ipad-compatibility">3. iPad Models Compatibility Overview</a></li>
-                <li><a href="#what-determines-compatibility">4. What Actually Determines Compatibility</a></li>
-                <li><a href="#faq">5. Frequently Asked Questions</a></li>
+                <li><a href="#architecture-groups">Two Main Architecture Groups</a></li>
+                <li><a href="#iphone-models">iPhone Models by Architecture</a></li>
+                <li><a href="#ipad-models">iPad Models by Architecture</a></li>
+                <li><a href="#quick-check">How to Check Your Device</a></li>
+                <li><a href="#faq">Frequently Asked Questions</a></li>
+                <li><a href="#final-notes">Final Notes</a></li>
             </ul>
         </nav>
 
-        <!-- 1. TrollStore Compatibility by Chip Architecture -->
-        <section id="by-chip-architecture">
-            <h2>1. TrollStore Compatibility by Chip Architecture</h2>
-            <p>TrollStore works on two main architecture groups:</p>
+        <!-- Architecture Groups -->
+        <section id="architecture-groups">
+            <h2>1. Two Main Architecture Groups</h2>
+            <p>Apple devices used with TrollStore are commonly divided into two architecture groups based on their processors:</p>
+
             <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
                             <th>Architecture</th>
                             <th>Chip Range</th>
-                            <th>Typical Devices</th>
-                            <th>Notes</th>
+                            <th>Typical Release Period</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>arm64</code></td>
+                            <td><strong>arm64</strong></td>
                             <td>A8 – A11</td>
-                            <td>iPhone 6s to iPhone X</td>
-                            <td>Older devices</td>
+                            <td>2014 – 2017</td>
                         </tr>
                         <tr>
-                            <td><code>arm64e</code></td>
+                            <td><strong>arm64e</strong></td>
                             <td>A12 and newer</td>
-                            <td>iPhone XR / XS and all later models</td>
-                            <td>Newer devices</td>
+                            <td>2018 and later</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p>Installation methods can differ between these two groups, even on the same iOS version.</p>
+
+            <p>These two groups often have different installation method availability. Knowing which group your device belongs to is the first step when checking TrollStore-related information.</p>
         </section>
 
-        <!-- 2. iPhone Models Compatibility Overview -->
-        <section id="iphone-compatibility">
-            <h2>2. iPhone Models Compatibility Overview</h2>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>iPhone Model</th>
-                            <th>Chip</th>
-                            <th>Architecture</th>
-                            <th>Can Potentially Support TrollStore?</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>iPhone 5s</strong></td>
-                            <td>A7</td>
-                            <td>-</td>
-                            <td>No (iOS version too old)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone 6 / 6 Plus</strong></td>
-                            <td>A8</td>
-                            <td><code>arm64</code></td>
-                            <td>Possible (if iOS is supported)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone 6s / 6s Plus</strong></td>
-                            <td>A9</td>
-                            <td><code>arm64</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone 7 / 7 Plus</strong></td>
-                            <td>A10</td>
-                            <td><code>arm64</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone 8 / 8 Plus</strong></td>
-                            <td>A11</td>
-                            <td><code>arm64</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone X</strong></td>
-                            <td>A11</td>
-                            <td><code>arm64</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone XR / XS / XS Max</strong></td>
-                            <td>A12</td>
-                            <td><code>arm64e</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone 11 series</strong></td>
-                            <td>A13</td>
-                            <td><code>arm64e</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone 12 series</strong></td>
-                            <td>A14</td>
-                            <td><code>arm64e</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone 13 series</strong></td>
-                            <td>A15</td>
-                            <td><code>arm64e</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone 14 series</strong></td>
-                            <td>A15/A16</td>
-                            <td><code>arm64e</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone 15 series</strong></td>
-                            <td>A16/A17</td>
-                            <td><code>arm64e</code></td>
-                            <td>Possible (only if iOS version is supported)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone 16 series</strong></td>
-                            <td>A18</td>
-                            <td><code>arm64e</code></td>
-                            <td>Currently not supported (iOS too new)</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- iPhone Models -->
+        <section id="iphone-models">
+            <h2>2. iPhone Models by Architecture</h2>
+
+            <div class="device-group">
+                <h3>arm64 (A8 – A11) iPhones</h3>
+                <p>These models use older Apple processors and belong to the arm64 group:</p>
+                <ul class="device-list">
+                    <li>iPhone 6 / 6 Plus (A8)</li>
+                    <li>iPhone 6s / 6s Plus (A9)</li>
+                    <li>iPhone SE (1st generation) (A9)</li>
+                    <li>iPhone 7 / 7 Plus (A10)</li>
+                    <li>iPhone 8 / 8 Plus (A11)</li>
+                    <li>iPhone X (A11)</li>
+                </ul>
             </div>
-            <div class="warning-box">
-                <p><strong>Important:</strong> “Possible” only means the hardware architecture is compatible. The device must also be running a supported iOS version.</p>
+
+            <div class="device-group">
+                <h3>arm64e (A12 and newer) iPhones</h3>
+                <p>These models use newer processors and belong to the arm64e group:</p>
+                <ul class="device-list">
+                    <li>iPhone XR / XS / XS Max (A12)</li>
+                    <li>iPhone 11 / 11 Pro / 11 Pro Max (A13)</li>
+                    <li>iPhone SE (2nd generation) (A13)</li>
+                    <li>iPhone 12 series (A14)</li>
+                    <li>iPhone 13 series (A15)</li>
+                    <li>iPhone SE (3rd generation) (A15)</li>
+                    <li>iPhone 14 series (A15 / A16)</li>
+                    <li>iPhone 15 series (A16 / A17 Pro)</li>
+                    <li>iPhone 16 series (A18 / A18 Pro)</li>
+                </ul>
+            </div>
+
+            <div class="callout">
+                <p><strong>Note:</strong> iPhone 5s and earlier models use even older chips (A7 and below) and fall outside the commonly discussed TrollStore device range.</p>
             </div>
         </section>
 
-        <!-- 3. iPad Models Compatibility Overview -->
-        <section id="ipad-compatibility">
-            <h2>3. iPad Models Compatibility Overview</h2>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>iPad Model</th>
-                            <th>Typical Chip</th>
-                            <th>Architecture</th>
-                            <th>Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>iPad mini 4</strong></td>
-                            <td>A8</td>
-                            <td><code>arm64</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPad (6th generation)</strong></td>
-                            <td>A10</td>
-                            <td><code>arm64</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPad (7th generation)</strong></td>
-                            <td>A10</td>
-                            <td><code>arm64</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPad (8th / 9th generation)</strong></td>
-                            <td>A12 / A13</td>
-                            <td><code>arm64e</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPad Air (3rd gen and newer)</strong></td>
-                            <td>A12+</td>
-                            <td><code>arm64e</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPad Pro (2018 and newer)</strong></td>
-                            <td>A12X / M1/M2</td>
-                            <td><code>arm64e</code></td>
-                            <td>Possible</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Newer iPad models (2024+)</strong></td>
-                            <td>Newer chips</td>
-                            <td><code>arm64e</code></td>
-                            <td>Only if running a supported iPadOS version</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- iPad Models -->
+        <section id="ipad-models">
+            <h2>3. iPad Models by Architecture</h2>
+
+            <div class="device-group">
+                <h3>arm64 (A8 – A11) iPads</h3>
+                <ul class="device-list">
+                    <li>iPad mini 4 (A8)</li>
+                    <li>iPad Air 2 (A8X)</li>
+                    <li>iPad (5th generation) (A9)</li>
+                    <li>iPad (6th generation) (A10)</li>
+                    <li>iPad (7th generation) (A10)</li>
+                </ul>
+            </div>
+
+            <div class="device-group">
+                <h3>arm64e (A12 and newer) iPads</h3>
+                <ul class="device-list">
+                    <li>iPad mini 5 (A12)</li>
+                    <li>iPad mini 6 (A15)</li>
+                    <li>iPad Air (3rd generation and newer)</li>
+                    <li>iPad (8th generation and newer)</li>
+                    <li>iPad Pro (2018 and later, including M1/M2/M4 models)</li>
+                </ul>
             </div>
         </section>
 
-        <!-- 4. What Actually Determines Compatibility -->
-        <section id="what-determines-compatibility">
-            <h2>4. What Actually Determines Compatibility</h2>
+        <!-- Quick Check -->
+        <section id="quick-check">
+            <h2>4. How to Check Your Device Group</h2>
+            <p>To find out which architecture group your iPhone or iPad belongs to:</p>
+            <ol>
+                <li>Open the <strong>Settings</strong> app.</li>
+                <li>Go to <strong>General → About</strong>.</li>
+                <li>Look at the <strong>Model Name</strong>.</li>
+                <li>Match the model with the lists above.</li>
+            </ol>
+            <p>As a simple rule of thumb:</p>
             <ul>
-                <li><strong>Chip Architecture (this page)</strong> – decides which installation methods are available.</li>
-                <li><strong>iOS / iPadOS Version (see P05)</strong> – the most important factor. TrollStore only works on specific firmware ranges.</li>
-                <li><strong>Available Installation Method</strong> – even if both architecture and iOS version are fine, a working installer must exist for that combination.</li>
+                <li>Most devices released in <strong>2017 or earlier</strong> → arm64 group</li>
+                <li>Most devices released in <strong>2018 or later</strong> → arm64e group</li>
             </ul>
         </section>
 
-        <!-- 5. Frequently Asked Questions -->
+        <!-- FAQ -->
         <section id="faq">
             <h2>5. Frequently Asked Questions</h2>
 
             <div class="faq-item">
+                <h3>Which iPhones are arm64?</h3>
+                <p>The main arm64 iPhones still commonly discussed are iPhone 6s, iPhone 7, iPhone 8, and iPhone X series.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Which iPhones are arm64e?</h3>
+                <p>iPhone XR and all iPhone models released after it (11, 12, 13, 14, 15, and 16 series) use arm64e architecture.</p>
+            </div>
+
+            <div class="faq-item">
                 <h3>Does TrollStore work on iPhone 8?</h3>
-                <p>Yes, the iPhone 8 (A11, <code>arm64</code>) can support TrollStore if it is running a supported iOS version.</p>
+                <p>iPhone 8 and iPhone 8 Plus belong to the arm64 (A11) group. Whether TrollStore can be used also depends on the installed system version and available installation methods.</p>
             </div>
 
             <div class="faq-item">
                 <h3>Does TrollStore work on iPhone X?</h3>
-                <p>Yes, same as iPhone 8 (A11).</p>
+                <p>iPhone X also uses the A11 chip and belongs to the same arm64 group as the iPhone 8 series.</p>
             </div>
 
             <div class="faq-item">
-                <h3>Does TrollStore work on iPhone 11 / 12 / 13 / 14?</h3>
-                <p>These models use <code>arm64e</code> architecture and can support TrollStore, but only on specific iOS versions.</p>
+                <h3>Does TrollStore work on iPhone 11 / 12 / 13 / 14 / 15?</h3>
+                <p>These models all belong to the arm64e group. Actual usability depends on the system version currently installed on the device.</p>
             </div>
 
             <div class="faq-item">
-                <h3>Does TrollStore work on iPhone 15 / 16?</h3>
-                <p>Hardware is compatible (<code>arm64e</code>), but most current iOS versions on these devices are outside the supported range.</p>
+                <h3>Does the chip architecture alone decide if TrollStore works?</h3>
+                <p>No. Architecture only tells you which group the device belongs to. Whether TrollStore can actually be installed also depends on the system version and the installation methods available for that combination.</p>
             </div>
 
             <div class="faq-item">
-                <h3>Does TrollStore work on iPad?</h3>
-                <p>Many iPad models can support it, depending on the chip and installed iPadOS version. Check the table above and the iOS compatibility page.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Is there an official list of supported devices?</h3>
-                <p>No. The official TrollStore project only documents supported iOS/iPadOS versions and architecture requirements.</p>
+                <h3>Where can I check supported system versions?</h3>
+                <p>For detailed iOS and iPadOS version compatibility, please refer to the dedicated TrollStore iOS Compatibility page on this site.</p>
             </div>
         </section>
 
-        <!-- Conclusion -->
-        <section id="conclusion">
+        <!-- Final Notes -->
+        <section id="final-notes">
+            <h2>Final Notes</h2>
+            <p>This page only covers <strong>device models and chip architecture grouping</strong>. It is intended to help you quickly identify whether your iPhone or iPad belongs to the arm64 or arm64e group.</p>
+            <p>For system version requirements and more detailed compatibility information, please check the separate iOS Compatibility page.</p>
             <div class="callout">
-                <p>For the complete list of supported iOS and iPadOS versions, please check the <a href="/trollstore-ios-compatibility/">TrollStore iOS Compatibility</a> page.</p>
-                <p>That page contains the exact version ranges that currently work.</p>
+                <p><strong>Official TrollStore Repository:</strong> <a href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer">https://github.com/opa334/TrollStore</a></p>
             </div>
         </section>
     </main>
-
 </body>
 </html>
