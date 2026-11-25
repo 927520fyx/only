@@ -3,90 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Complete TrollStore supported devices guide for iPhone and iPad: check arm64 and arm64e architectures, A-series and M-series chips, supported iOS/iPadOS versions, and installation groups.">
-    <meta name="keywords" content="TrollStore supported devices, TrollStore compatible iPhone, TrollStore compatible iPad, arm64 vs arm64e TrollStore, iOS 17.0 TrollStore devices">
+    <meta name="description" content="Complete TrollStore supported devices matrix for iPhone, iPad, and iPod touch. Check chip architecture (arm64 vs arm64e), factory iOS bounds, compatible firmware windows, and exact installation methods.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://927520fyx.github.io/only/P06.HTML">
-    <title>TrollStore Supported Devices: Compatible iPhone &amp; iPad Models</title>
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://927520fyx.github.io/only/P06.HTML">
-    <meta property="og:title" content="TrollStore Supported Devices: Compatible iPhone &amp; iPad Models">
-    <meta property="og:description" content="Check iPhone and iPad compatibility with TrollStore by chip architecture (arm64 vs arm64e), iOS/iPadOS version, and installation group.">
-
-    <!-- Structured Data: BreadcrumbList, Article & FAQPage -->
+    <title>TrollStore Supported Devices Matrix: iPhone, iPad &amp; iPod touch Compatibility</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "BreadcrumbList",
-          "@id": "https://927520fyx.github.io/only/P06.HTML#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://927520fyx.github.io/only/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "iOS Compatibility",
-              "item": "https://927520fyx.github.io/only/P05.HTML"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Supported Devices",
-              "item": "https://927520fyx.github.io/only/P06.HTML"
-            }
-          ]
-        },
-        {
-          "@type": "Article",
-          "@id": "https://927520fyx.github.io/only/P06.HTML#article",
-          "headline": "TrollStore Supported Devices: Compatible iPhone and iPad Models",
-          "description": "Complete TrollStore supported devices guide for iPhone and iPad: check arm64 and arm64e architectures, A-series and M-series chips, supported iOS/iPadOS versions, and installation groups.",
+          "@type": "TechArticle",
+          "headline": "TrollStore Supported Devices Matrix: iPhone, iPad & iPod touch Compatibility",
+          "description": "Complete TrollStore supported devices matrix for iPhone, iPad, and iPod touch covering chip generations, arm64 vs arm64e architecture, factory firmware windows, and installation methods.",
+          "inLanguage": "en",
           "mainEntityOfPage": {
+            "@type": "WebPage",
             "@id": "https://927520fyx.github.io/only/P06.HTML"
           }
         },
         {
           "@type": "FAQPage",
-          "@id": "https://927520fyx.github.io/only/P06.HTML#faq",
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Does TrollStore work on every iPhone or iPad model?",
+              "name": "Does iPod touch 7th Generation Support TrollStore?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "No. A device must run an iOS or iPadOS version within TrollStore's supported range (14.0 beta 2 through 16.6.1, 16.7 RC build 20H18, or 17.0) and have a valid installation route for its hardware and firmware combination."
+                "text": "Yes. The iPod touch (7th generation) runs on the A10 Fusion (arm64) chip and supports iOS 12.3 through iOS 15.8.x, placing it inside TrollStore's compatible firmware range when running iOS 14.0 beta 2 or newer."
               }
             },
             {
               "@type": "Question",
-              "name": "What is the difference between arm64 and arm64e for TrollStore?",
+              "name": "Why Do iPhone 13 and iPhone 14 Have Different Compatibility Windows Despite Both Using the A15 Chip?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "In TrollStore installation matrices, arm64 covers older A-series chips (such as A8 through A11), while arm64e covers A12 through A17 Pro and M1/M2 chips. Installation methods differ across arm64 (A8), arm64 (A9-A11), and arm64e (A12-A17/M1-M2) depending on the exact firmware."
+                "text": "The iPhone 13 launched with iOS 15.0, giving it compatibility across iOS 15.0 through iOS 17.0. The iPhone 14 and 14 Plus launched a year later with iOS 16.0 preinstalled, so they can never run iOS 15 and only have compatibility from iOS 16.0 through iOS 17.0."
               }
             },
             {
               "@type": "Question",
-              "name": "Does iPhone 15 support TrollStore?",
+              "name": "How Can I Tell If a Sealed or Used iPhone 15 Still Has Compatible iOS 17.0?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "iPhone 15 models use arm64e processors (A16 or A17 Pro), so hardware support exists in principle, but firmware support applies to iOS 17.0 rather than iOS 17.0.1 or later releases."
+                "text": "Only early-production iPhone 15 units manufactured around September 2023 shipped with iOS 17.0. Apple quickly released iOS 17.0.1 and 17.0.2 at launch, which patched the CoreTrust vulnerability. Without verifying the exact Software Version in Settings, a sealed iPhone 15 is most likely on iOS 17.0.1 or later and incompatible."
               }
             },
             {
               "@type": "Question",
-              "name": "Why can't newer devices like iPad Pro M4 or newer iPhones run TrollStore on later firmware?",
+              "name": "Why Are A8 Devices Treated Differently From A9–A11 Devices?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "TrollStore relies on specific CoreTrust code-signing vulnerabilities patched by Apple after iOS/iPadOS 17.0 (aside from the 16.7 RC 20H18 exception). Newer hardware does not bypass firmware patches."
+                "text": "Although A8 devices (iPad mini 4 and iPad Air 2) and A9–A11 devices both belong to the arm64 architecture, A8 processors use a 4K memory page size rather than the 16K page size used on A9 and newer chips, requiring different installation utilities depending on the exact iPadOS version."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can M4 iPad Pro or iPhone 16 Models Run TrollStore?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Both the M4 iPad Pro (shipped with iPadOS 17.5) and the iPhone 16 lineup (shipped with iOS 18.0) launched months after Apple patched the CoreTrust vulnerability in iOS 17.0.1, so no compatible firmware exists for those devices."
               }
             }
           ]
@@ -94,7 +69,6 @@
       ]
     }
     </script>
-
     <style>
         :root {
             --primary-color: #007AFF;
@@ -108,12 +82,6 @@
             --warning-bg: #fff8eb;
             --warning-border: #ffb300;
             --code-bg: #f2f2f7;
-            --ok-bg: #eaf8ee;
-            --ok-text: #146c2e;
-            --warn-badge-bg: #fff4d6;
-            --warn-badge-text: #7a4f01;
-            --no-bg: #fdecec;
-            --no-text: #9b1c1c;
         }
 
         * {
@@ -138,25 +106,18 @@
         }
 
         header h1 {
-            max-width: 860px;
-            margin: 0 auto 0.6rem;
+            max-width: 820px;
+            margin: 0 auto;
             font-size: 2.1rem;
             font-weight: 700;
             line-height: 1.3;
         }
 
-        header p.subtitle {
-            max-width: 760px;
-            margin: 0 auto;
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.92);
-        }
-
         .container {
-            max-width: 860px;
+            max-width: 820px;
             margin: -1.5rem auto 3rem;
             background-color: var(--bg-card);
-            padding: 2.5rem;
+            padding: 2.5rem 2.5rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
         }
@@ -198,7 +159,7 @@
             padding: 0.15rem 0.4rem;
             border-radius: 4px;
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            font-size: 0.88em;
+            font-size: 0.9em;
             color: #1d1d1f;
         }
 
@@ -211,30 +172,6 @@
 
         li {
             margin-bottom: 0.5rem;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.15rem 0.55rem;
-            border-radius: 999px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            line-height: 1.4;
-        }
-
-        .badge-yes {
-            background-color: var(--ok-bg);
-            color: var(--ok-text);
-        }
-
-        .badge-cond {
-            background-color: var(--warn-badge-bg);
-            color: var(--warn-badge-text);
-        }
-
-        .badge-no {
-            background-color: var(--no-bg);
-            color: var(--no-text);
         }
 
         .toc {
@@ -270,11 +207,11 @@
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            font-size: 0.93rem;
+            font-size: 0.92rem;
         }
 
         th, td {
-            padding: 0.8rem 0.9rem;
+            padding: 0.75rem 0.85rem;
             border: 1px solid var(--border-color);
             vertical-align: top;
         }
@@ -297,8 +234,7 @@
             margin: 1.5rem 0;
         }
 
-        .callout p:last-child,
-        .callout ul:last-child {
+        .callout p:last-child {
             margin-bottom: 0;
         }
 
@@ -311,14 +247,14 @@
             color: #5c4500;
         }
 
-        .warning-box p:last-child,
-        .warning-box ul:last-child {
+        .warning-box p {
+            color: #5c4500;
             margin-bottom: 0;
         }
 
         .faq-item {
-            margin-bottom: 1.4rem;
-            padding-bottom: 1.1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.2rem;
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -330,30 +266,8 @@
         .faq-item h3 {
             color: var(--text-main);
             margin-top: 0;
-            margin-bottom: 0.45rem;
-            font-size: 1.08rem;
-        }
-
-        .related-links {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 0.75rem;
-            margin: 1.25rem 0 1.5rem;
-        }
-
-        .related-links a {
-            display: block;
-            padding: 0.8rem 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            background-color: #f9f9fb;
-            font-weight: 500;
-        }
-
-        .related-links a:hover {
-            border-color: var(--primary-color);
-            background-color: var(--callout-bg);
-            text-decoration: none;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
         @media (max-width: 640px) {
@@ -365,10 +279,8 @@
             header h1 {
                 font-size: 1.6rem;
             }
-            .toc ul,
-            .related-links {
+            .toc ul {
                 columns: 1;
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -376,285 +288,296 @@
 <body>
 
     <header>
-        <h1>TrollStore Supported Devices: Compatible iPhone &amp; iPad Models</h1>
-        <p class="subtitle">Evaluate iPhone and iPad compatibility by chip architecture, iOS/iPadOS version, build number, and installation method.</p>
+        <h1>TrollStore Supported Devices Matrix: iPhone, iPad &amp; iPod touch Compatibility</h1>
     </header>
 
     <main class="container">
-        <!-- Quick Summary -->
+        <!-- Introduction -->
         <section>
-            <p>Whether an iPhone or iPad can run TrollStore depends on <strong>three intersecting factors</strong>: the installed iOS or iPadOS version (including exact build numbers for edge cases), the device's processor architecture (<code>arm64</code> vs. <code>arm64e</code>), and whether a valid installation route exists for that exact pairing.</p>
-            <p>Officially documented TrollStore support covers <strong>iOS/iPadOS 14.0 beta 2 through 16.6.1</strong>, <strong>iOS/iPadOS 16.7 RC (build 20H18)</strong>, and <strong>iOS/iPadOS 17.0</strong>. Firmware releases such as public 16.7, 17.0.1 and later, and iOS/iPadOS 18+ fall outside the documented support range.</p>
-            <div class="callout">
-                <p><strong>Key Rule of Thumb:</strong> A newer iPhone or iPad is not automatically supported if its firmware has already passed iOS/iPadOS 17.0 (except the specific 16.7 RC <code>20H18</code> build). Conversely, an older model that never reached supported firmware—or is stuck on an unsupported version—cannot use TrollStore.</p>
-            </div>
+            <p>Whether an iPhone, iPad, or iPod touch can install TrollStore depends on two hardware boundaries: the device's <strong>factory-shipped iOS/iPadOS version</strong> (which sets the earliest firmware it can ever run) and its <strong>processor architecture</strong> (<code>arm64</code> vs. <code>arm64e</code>, which determines which installer utility works).</p>
+            <p>Devices powered by chips from the <strong>A8 through A17 Pro</strong> and <strong>M1 through M2</strong> have at least one firmware build inside TrollStore's supported window (<code>14.0 beta 2</code> – <code>16.6.1</code>, <code>16.7 RC 20H18</code>, and <code>17.0</code>). Older A7 devices cap out too early (iOS 12.5.7), while M4 iPads and iPhone 16 models shipped after Apple patched the CoreTrust bug.</p>
+            <p>Use the hardware matrices below to look up your exact model, verify its eligible firmware window, and see which installation tool applies to your chip generation.</p>
         </section>
 
-        <!-- TOC -->
+        <!-- Table of Contents -->
         <nav class="toc" aria-label="Table of Contents">
             <div class="toc-title">Table of Contents</div>
             <ul>
-                <li><a href="#compatibility-logic">How Device Compatibility Is Determined</a></li>
-                <li><a href="#iphone-models">iPhone Compatibility by Generation</a></li>
-                <li><a href="#ipad-models">iPad Compatibility by Lineup</a></li>
-                <li><a href="#architecture-groups">Architecture Groups &amp; Installation Routes</a></li>
-                <li><a href="#check-device">How to Check Your Device &amp; Firmware</a></li>
-                <li><a href="#common-pitfalls">Common Device Compatibility Pitfalls</a></li>
-                <li><a href="#faq">Frequently Asked Questions</a></li>
-                <li><a href="#summary">Summary &amp; Next Guides</a></li>
+                <li><a href="#iphone-matrix">Supported iPhone Models Matrix</a></li>
+                <li><a href="#ipad-ipod-matrix">Supported iPad &amp; iPod touch Matrix</a></li>
+                <li><a href="#chip-installation-routes">How Chip Architecture Dictates Installation Tools</a></li>
+                <li><a href="#unsupported-hardware">Hardware With Zero Compatible Firmware</a></li>
+                <li><a href="#how-to-verify-device">4-Step Device &amp; Build Verification</a></li>
+                <li><a href="#faq">Device-Specific Questions (FAQ)</a></li>
             </ul>
         </nav>
 
-        <!-- 1. How Device Compatibility Is Determined -->
-        <section id="compatibility-logic">
-            <h2>How Device Compatibility Is Determined</h2>
-            <p>TrollStore relies on CoreTrust code-signing vulnerabilities rather than raw CPU speed or screen size. Because Apple patched those vulnerabilities in later firmware builds, compatibility is bounded by operating system history first and hardware architecture second.</p>
-            <ul>
-                <li><strong>Firmware overlap:</strong> The device's current iOS or iPadOS version must fall within the supported range (<code>14.0 beta 2–16.6.1</code>, <code>16.7 RC 20H18</code>, or <code>17.0</code>) and must be a version the device model can actually run.</li>
-                <li><strong>Processor architecture:</strong> Installation guides group devices into <code>arm64 (A8)</code>, <code>arm64 (A9–A11)</code>, and <code>arm64e (A12–A17 Pro / M1–M2)</code> because exploit and persistence paths differ across chip generations.</li>
-                <li><strong>Installation-method availability:</strong> Having a supported firmware does not mean every installation tool works identically on every chip or sub-release (for example, some late iOS 15 builds use specific routes such as TrollRestore or TrollInstallerX/TrollHelperOTA depending on version and architecture).</li>
-            </ul>
-            <p>For a full breakdown of firmware ranges and exceptions, see our <a href="./P05.HTML">TrollStore iOS Compatibility Guide</a>.</p>
-        </section>
-
-        <!-- 2. iPhone Models -->
-        <section id="iphone-models">
-            <h2>iPhone Compatibility by Generation</h2>
-            <p>Below is how major iPhone families map against TrollStore's architecture categories and supported firmware window.</p>
+        <!-- Supported iPhone Models Matrix -->
+        <section id="iphone-matrix">
+            <h2>Supported iPhone Models Matrix</h2>
+            <p>Each iPhone generation enters the market on a specific baseline iOS release and stops receiving updates at a maximum iOS ceiling. TrollStore compatibility exists only where that lifecycle overlaps with <code>iOS 14.0 beta 2 – 17.0</code>.</p>
 
             <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
                             <th>iPhone Models</th>
-                            <th>Chip</th>
-                            <th>Architecture</th>
-                            <th>Firmware Overlap &amp; Notes</th>
-                            <th>Status</th>
+                            <th>Chip &amp; Arch</th>
+                            <th>Shipped / Max iOS</th>
+                            <th>TrollStore Eligible Window</th>
+                            <th>Primary Install Route</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>iPhone 5s</strong></td>
-                            <td>A7</td>
-                            <td><code>arm64</code></td>
-                            <td>No supported firmware overlap (max iOS 12.5.x).</td>
-                            <td><span class="badge badge-no">Not Supported</span></td>
+                            <td><strong>iPhone 6s, 6s Plus, SE (1st gen)</strong></td>
+                            <td>A9 (<code>arm64</code>)</td>
+                            <td>iOS 9.0 – 15.8.x</td>
+                            <td><code>14.0b2 – 15.8.x</code></td>
+                            <td>TrollInstallerX (up to 15.8.3) / TrollRestore</td>
                         </tr>
                         <tr>
-                            <td><strong>iPhone 6 / 6 Plus</strong></td>
-                            <td>A8</td>
-                            <td><code>arm64</code></td>
-                            <td>No supported firmware overlap (max iOS 12.5.x).</td>
-                            <td><span class="badge badge-no">Not Supported</span></td>
+                            <td><strong>iPhone 7, 7 Plus</strong></td>
+                            <td>A10 Fusion (<code>arm64</code>)</td>
+                            <td>iOS 10.0 – 15.8.x</td>
+                            <td><code>14.0b2 – 15.8.x</code></td>
+                            <td>TrollInstallerX (up to 15.8.3) / TrollRestore</td>
                         </tr>
                         <tr>
-                            <td><strong>iPhone 6s / 6s Plus / SE (1st gen)</strong></td>
-                            <td>A9</td>
-                            <td><code>arm64</code></td>
-                            <td>Supports iOS 14.0–15.8.x; check exact iOS 14/15 build and route.</td>
-                            <td><span class="badge badge-yes">Firmware Overlap</span></td>
+                            <td><strong>iPhone 8, 8 Plus, iPhone X</strong></td>
+                            <td>A11 Bionic (<code>arm64</code>)</td>
+                            <td>iOS 11.0 – 16.7.x</td>
+                            <td><code>14.0b2 – 16.6.1</code>, <code>16.7 RC (20H18)</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore (16.7 RC)</td>
                         </tr>
                         <tr>
-                            <td><strong>iPhone 7 / 7 Plus</strong></td>
-                            <td>A10 Fusion</td>
-                            <td><code>arm64</code></td>
-                            <td>Supports iOS 14.0–15.8.x; check exact iOS 14/15 build and route.</td>
-                            <td><span class="badge badge-yes">Firmware Overlap</span></td>
+                            <td><strong>iPhone XR, XS, XS Max</strong></td>
+                            <td>A12 Bionic (<code>arm64e</code>)</td>
+                            <td>iOS 12.0 – 18.x</td>
+                            <td><code>14.0b2 – 16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore (16.7 RC, 17.0)</td>
                         </tr>
                         <tr>
-                            <td><strong>iPhone 8 / 8 Plus / X</strong></td>
-                            <td>A11 Bionic</td>
-                            <td><code>arm64</code></td>
-                            <td>Supports iOS 14.0–16.6.1 (and 16.7 RC <code>20H18</code> if on that exact RC build; not public 16.7+).</td>
-                            <td><span class="badge badge-yes">Firmware Overlap</span></td>
+                            <td><strong>iPhone 11, 11 Pro, 11 Pro Max, SE (2nd gen)</strong></td>
+                            <td>A13 Bionic (<code>arm64e</code>)</td>
+                            <td>iOS 13.0 – 18.x</td>
+                            <td><code>14.0b2 – 16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore (16.7 RC, 17.0)</td>
                         </tr>
                         <tr>
-                            <td><strong>iPhone XR / XS / XS Max</strong></td>
-                            <td>A12 Bionic</td>
-                            <td><code>arm64e</code></td>
-                            <td>Supports iOS 14.0–16.6.1, 16.7 RC (<code>20H18</code>), and 17.0 (if still on a supported build).</td>
-                            <td><span class="badge badge-yes">Firmware Overlap</span></td>
+                            <td><strong>iPhone 12, 12 mini, 12 Pro, 12 Pro Max</strong></td>
+                            <td>A14 Bionic (<code>arm64e</code>)</td>
+                            <td>iOS 14.1 – 18.x</td>
+                            <td><code>14.1 – 16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore (16.7 RC, 17.0)</td>
                         </tr>
                         <tr>
-                            <td><strong>iPhone 11 / 11 Pro / 11 Pro Max / SE (2nd gen)</strong></td>
-                            <td>A13 Bionic</td>
-                            <td><code>arm64e</code></td>
-                            <td>Supports iOS 14.0–16.6.1, 16.7 RC (<code>20H18</code>), and 17.0 depending on installed version.</td>
-                            <td><span class="badge badge-yes">Firmware Overlap</span></td>
+                            <td><strong>iPhone 13, 13 mini, 13 Pro, 13 Pro Max, SE (3rd gen)</strong></td>
+                            <td>A15 Bionic (<code>arm64e</code>)</td>
+                            <td>iOS 15.0 (15.4 for SE 3) – 18.x</td>
+                            <td><code>15.0 (or 15.4) – 16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore (16.7 RC, 17.0)</td>
                         </tr>
                         <tr>
-                            <td><strong>iPhone 12 / 12 mini / 12 Pro / 12 Pro Max / SE (3rd gen)</strong></td>
-                            <td>A14 / A15</td>
-                            <td><code>arm64e</code></td>
-                            <td>12 series launched on iOS 14; SE 3rd gen launched on iOS 15.4. Compatible only on supported builds up to 17.0.</td>
-                            <td><span class="badge badge-yes">Firmware Overlap</span></td>
+                            <td><strong>iPhone 14, 14 Plus</strong></td>
+                            <td>A15 Bionic (<code>arm64e</code>)</td>
+                            <td>iOS 16.0 – 18.x</td>
+                            <td><code>16.0 – 16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore (16.7 RC, 17.0)</td>
                         </tr>
                         <tr>
-                            <td><strong>iPhone 13 / 13 mini / 13 Pro / 13 Pro Max</strong></td>
-                            <td>A15 Bionic</td>
-                            <td><code>arm64e</code></td>
-                            <td>Launched on iOS 15; supports eligible builds up to iOS 17.0 (not 17.0.1+).</td>
-                            <td><span class="badge badge-yes">Firmware Overlap</span></td>
+                            <td><strong>iPhone 14 Pro, 14 Pro Max</strong></td>
+                            <td>A16 Bionic (<code>arm64e</code>)</td>
+                            <td>iOS 16.0 – 18.x</td>
+                            <td><code>16.0 – 16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore (16.7 RC, 17.0)</td>
                         </tr>
                         <tr>
-                            <td><strong>iPhone 14 / 14 Plus / 14 Pro / 14 Pro Max</strong></td>
-                            <td>A15 / A16</td>
-                            <td><code>arm64e</code></td>
-                            <td>Launched on iOS 16; supports eligible builds up to iOS 17.0 (not 17.0.1+).</td>
-                            <td><span class="badge badge-yes">Firmware Overlap</span></td>
+                            <td><strong>iPhone 15, 15 Plus</strong></td>
+                            <td>A16 Bionic (<code>arm64e</code>)</td>
+                            <td>iOS 17.0 – 18.x</td>
+                            <td><code>17.0</code> only (early launch stock)</td>
+                            <td>TrollRestore (PC/Mac backup restore)</td>
                         </tr>
                         <tr>
-                            <td><strong>iPhone 15 / 15 Plus / 15 Pro / 15 Pro Max</strong></td>
-                            <td>A16 / A17 Pro</td>
-                            <td><code>arm64e</code></td>
-                            <td>Launched on iOS 17.0; only devices still on <strong>iOS 17.0</strong> are in range (17.0.1+ is not supported).</td>
-                            <td><span class="badge badge-cond">Version-Critical</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>iPhone 16 series &amp; newer</strong></td>
-                            <td>A18 / newer</td>
-                            <td><code>arm64e</code></td>
-                            <td>Shipped after iOS 17.0; outside documented TrollStore firmware support.</td>
-                            <td><span class="badge badge-no">Not Supported</span></td>
+                            <td><strong>iPhone 15 Pro, 15 Pro Max</strong></td>
+                            <td>A17 Pro (<code>arm64e</code>)</td>
+                            <td>iOS 17.0 – 18.x</td>
+                            <td><code>17.0</code> only (early launch stock)</td>
+                            <td>TrollRestore (PC/Mac backup restore)</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <!-- 3. iPad Models -->
-        <section id="ipad-models">
-            <h2>iPad Compatibility by Lineup</h2>
-            <p>iPadOS follows the same CoreTrust firmware rules as iOS, but iPad models span both older <code>arm64</code> chips and newer A-series / M-series <code>arm64e</code> chips.</p>
+        <!-- Supported iPad & iPod touch Matrix -->
+        <section id="ipad-ipod-matrix">
+            <h2>Supported iPad &amp; iPod touch Matrix</h2>
+            <p>iPad lineups span both <code>arm64</code> (A8 through A10X) and <code>arm64e</code> (A12 through M2) silicon. Unlike iPhones, several iPads also feature <strong>A8/A8X</strong> processors, which have distinct kernel page-size constraints.</p>
 
             <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
-                            <th>iPad Lineup</th>
-                            <th>Models &amp; Chips</th>
-                            <th>Architecture</th>
-                            <th>Firmware &amp; Hardware Notes</th>
-                            <th>Status</th>
+                            <th>Device Model</th>
+                            <th>Chip &amp; Arch</th>
+                            <th>Shipped / Max OS</th>
+                            <th>TrollStore Eligible Window</th>
+                            <th>Primary Install Route</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>iPad mini</strong></td>
-                            <td>mini 4 (A8) · mini 5 (A12) · mini 6 (A15)</td>
-                            <td><code>arm64</code> (mini 4)<br><code>arm64e</code> (mini 5–6)</td>
-                            <td>mini 4 maxes out at iPadOS 15.x; mini 5 and mini 6 overlap up to iPadOS 17.0 if on a supported build.</td>
-                            <td><span class="badge badge-yes">Firmware Overlap</span></td>
+                            <td><strong>iPad mini 4</strong></td>
+                            <td>A8 (<code>arm64</code>)</td>
+                            <td>iOS 9.0 – 15.8.x</td>
+                            <td><code>14.0b2 – 15.8.x</code></td>
+                            <td>TrollMisaka / TrollInstallerX / TrollRestore</td>
                         </tr>
                         <tr>
-                            <td><strong>Standard iPad</strong></td>
-                            <td>5th gen (A9) · 6th–7th gen (A10) · 8th gen (A12) · 9th gen (A13) · 10th gen (A14)</td>
-                            <td><code>arm64</code> (5th–7th)<br><code>arm64e</code> (8th–10th)</td>
-                            <td>10th gen launched on iPadOS 16.1; eligible builds up to iPadOS 17.0 are in range (17.0.1+ is not).</td>
-                            <td><span class="badge badge-yes">Firmware Overlap</span></td>
+                            <td><strong>iPad Air 2</strong></td>
+                            <td>A8X (<code>arm64</code>)</td>
+                            <td>iOS 8.1 – 15.8.x</td>
+                            <td><code>14.0b2 – 15.8.x</code></td>
+                            <td>TrollMisaka / TrollInstallerX / TrollRestore</td>
                         </tr>
                         <tr>
-                            <td><strong>iPad Air</strong></td>
-                            <td>Air 2 (A8X) · Air 3 (A12) · Air 4 (A14) · Air 5 (M1)</td>
-                            <td><code>arm64</code> (Air 2)<br><code>arm64e</code> (Air 3–5)</td>
-                            <td>Air 2 maxes out at iPadOS 15.x; Air 3–5 overlap up to iPadOS 17.0 depending on exact build.</td>
-                            <td><span class="badge badge-yes">Firmware Overlap</span></td>
+                            <td><strong>iPad (5th, 6th, 7th gen)</strong></td>
+                            <td>A9 / A10 (<code>arm64</code>)</td>
+                            <td>iOS 10.2 – 16.7.x / 17.x</td>
+                            <td><code>14.0b2 – 16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code> (7th gen)</td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore</td>
                         </tr>
                         <tr>
-                            <td><strong>iPad Pro (A-series &amp; M1/M2)</strong></td>
-                            <td>9.7" &amp; 12.9" 1st (A9X) · 10.5" &amp; 12.9" 2nd (A10X) · 11" 1st &amp; 12.9" 3rd (A12X) · 11" 2nd &amp; 12.9" 4th (A12Z) · M1 / M2</td>
-                            <td><code>arm64</code> (A9X/A10X)<br><code>arm64e</code> (A12X/A12Z/M1/M2)</td>
-                            <td>Older A9X/A10X models top out at iPadOS 16.x/17.x limits; A12X/A12Z/M1/M2 overlap up to iPadOS 17.0 on eligible builds.</td>
-                            <td><span class="badge badge-yes">Firmware Overlap</span></td>
+                            <td><strong>iPad Pro 9.7" &amp; 12.9" (1st gen)</strong></td>
+                            <td>A9X (<code>arm64</code>)</td>
+                            <td>iOS 9.1 – 16.7.x</td>
+                            <td><code>14.0b2 – 16.6.1</code>, <code>16.7 RC (20H18)</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore (16.7 RC)</td>
                         </tr>
                         <tr>
-                            <td><strong>iPad Pro M4 &amp; newer iPads</strong></td>
-                            <td>iPad Pro M4 (and later M-series / A-series releases after 17.0)</td>
-                            <td><code>arm64e</code></td>
-                            <td>Released after iPadOS 17.0; no documented CoreTrust TrollStore firmware overlap.</td>
-                            <td><span class="badge badge-no">Not Supported</span></td>
+                            <td><strong>iPad Pro 10.5" &amp; 12.9" (2nd gen)</strong></td>
+                            <td>A10X (<code>arm64</code>)</td>
+                            <td>iOS 10.3.2 – 17.x</td>
+                            <td><code>14.0b2 – 16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>iPad mini (5th gen) &amp; iPad Air (3rd gen)</strong></td>
+                            <td>A12 Bionic (<code>arm64e</code>)</td>
+                            <td>iOS 12.2 – 18.x</td>
+                            <td><code>14.0b2 – 16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>iPad (8th, 9th, 10th gen)</strong></td>
+                            <td>A12 / A13 / A14 (<code>arm64e</code>)</td>
+                            <td>iPadOS 14.0 / 15.0 / 16.1 – 18.x</td>
+                            <td>Baseline OS through <code>16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>iPad mini (6th gen) &amp; iPad Air (4th gen)</strong></td>
+                            <td>A15 / A14 (<code>arm64e</code>)</td>
+                            <td>iPadOS 14.1 / 15.0 – 18.x</td>
+                            <td>Baseline OS through <code>16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>iPad Air (5th gen)</strong></td>
+                            <td>Apple M1 (<code>arm64e</code>)</td>
+                            <td>iPadOS 15.4 – 18.x</td>
+                            <td><code>15.4 – 16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>iPad Pro 11" (1st–4th gen) &amp; 12.9" (3rd–6th gen)</strong></td>
+                            <td>A12X / A12Z / M1 / M2 (<code>arm64e</code>)</td>
+                            <td>iOS 12.1 / 16.1 – 18.x</td>
+                            <td>Baseline OS through <code>16.6.1</code>, <code>16.7 RC</code>, <code>17.0</code></td>
+                            <td>TrollInstallerX (≤16.6.1) / TrollRestore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>iPod touch (7th generation)</strong></td>
+                            <td>A10 Fusion (<code>arm64</code>)</td>
+                            <td>iOS 12.3 – 15.8.x</td>
+                            <td><code>14.0b2 – 15.8.x</code></td>
+                            <td>TrollInstallerX (up to 15.8.3) / TrollRestore</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <!-- 4. Architecture Groups & Installation Routes -->
-        <section id="architecture-groups">
-            <h2>Architecture Groups &amp; Installation Routes</h2>
-            <p>Even when two devices both run a supported iOS or iPadOS version, the exact installation method can differ by processor group and firmware sub-version.</p>
+        <!-- How Chip Architecture Dictates Installation Tools -->
+        <section id="chip-installation-routes">
+            <h2>How Chip Architecture Dictates Installation Tools</h2>
+            <p>Even when two devices run the exact same iOS version, their processor group determines which exploit chain and installer utility can inject the Persistence Helper:</p>
+
+            <h3>1. A8 / A8X Devices (<code>arm64</code> with 4K Page Size)</h3>
+            <p>The <strong>iPad mini 4</strong> and <strong>iPad Air 2</strong> are the only TrollStore-compatible devices built on the A8 architecture. Because A8 chips use a 4K kernel page size (while A9 and newer use 16K pages), some kernel-exploit-based installers behave differently on them. On iPadOS 15.x, these tablets typically rely on <strong>TrollMisaka</strong>, <strong>TrollInstallerX</strong> (supported builds), or <strong>TrollRestore</strong>.</p>
+
+            <h3>2. A9 – A11 Devices (<code>arm64</code> without PAC)</h3>
+            <p>Covering the <strong>iPhone 6s through iPhone X</strong>, <strong>iPod touch 7</strong>, and <strong>iPad 5–7 / Pro 1st–2nd gen</strong>, these chips lack Pointer Authentication Codes (PAC). <strong>TrollInstallerX</strong> supports them cleanly from iOS 14.0 beta 2 up to 16.6.1 (and 15.8.3 on A9/A10). Additionally, because A9–A11 hardware is vulnerable to the bootrom-level checkm8 exploit, users on unsupported versions like iOS 16.7.x (non-RC) can still jailbreak with <em>palera1n</em> and use <strong>TrollStore Lite</strong> (which requires a jailbroken state to launch apps).</p>
+
+            <h3>3. A12 – A17 Pro &amp; M1 – M2 Devices (<code>arm64e</code> with PAC)</h3>
+            <p>Starting with the <strong>iPhone XR/XS</strong> and <strong>iPad mini 5 / Air 3 / Pro 2018</strong>, Apple introduced <code>arm64e</code> with hardware Pointer Authentication (PAC). On these devices, direct kernel-exploit installation via <strong>TrollInstallerX</strong> tops out at <strong>iOS 16.6.1</strong>. For <strong>iOS 16.7 RC (20H18)</strong> and <strong>iOS 17.0</strong>, there is no on-device kernel exploit for <code>arm64e</code>—installation requires <strong>TrollRestore</strong> over USB from a Windows, macOS, or Linux computer by modifying a device backup to replace a system app with the Persistence Helper.</p>
+        </section>
+
+        <!-- Hardware With Zero Compatible Firmware -->
+        <section id="unsupported-hardware">
+            <h2>Hardware With Zero Compatible Firmware</h2>
+            <p>Some Apple devices can never run standard TrollStore regardless of what software you download, because their entire supported iOS/iPadOS lifecycle falls either before or after the CoreTrust vulnerability window:</p>
             <ul>
-                <li><strong><code>arm64</code> — A8 / A8X group (e.g., iPad mini 4, iPad Air 2):</strong> Separate from A9–A11 devices in installation matrices; only applicable where a supported firmware (such as eligible iOS/iPadOS 14–15 builds) and installation route exist.</li>
-                <li><strong><code>arm64</code> — A9–A11 group (e.g., iPhone 6s, iPhone 7, iPhone 8, iPhone X, iPad 5th–7th gen):</strong> Uses A9–A11-specific installation paths across supported iOS/iPadOS 14–16.6.1 (and 16.7 RC <code>20H18</code> where applicable).</li>
-                <li><strong><code>arm64e</code> — A12–A17 Pro &amp; M1–M2 group (e.g., iPhone XR through iPhone 15, iPad mini 5/6, iPad Air 3–5, iPad Pro M1/M2):</strong> Uses <code>arm64e</code> installation routes (such as TrollHelperOTA, TrollInstallerX, or TrollRestore depending on exact OS version/build) up through iOS/iPadOS 17.0.</li>
+                <li><strong>iPhone 5s, iPhone 6, iPhone 6 Plus, iPad Air (1st gen), iPad mini 2 &amp; 3 (A7 / A8):</strong> Apple ended software updates for these models at <code>iOS 12.5.7</code>. Because TrollStore's CoreTrust bug was introduced in <code>iOS 14.0 beta 2</code>, these devices cannot reach the minimum firmware threshold.</li>
+                <li><strong>iPad Pro (M4) &amp; iPad Air (M2, 2024):</strong> Shipped out of the box with <code>iPadOS 17.5</code> (May 2024), long after Apple patched the CoreTrust flaw in <code>17.0.1</code>.</li>
+                <li><strong>iPhone 16, 16 Plus, 16 Pro, 16 Pro Max &amp; iPad mini (A17 Pro):</strong> Shipped out of the box with <code>iOS 18.0</code> / <code>iPadOS 18.0</code> (late 2024). No compatible firmware build exists for these models.</li>
             </ul>
             <div class="warning-box">
-                <p><strong>Do Not Guess the Installer by Model Alone:</strong> Always match your <em>exact iOS/iPadOS version + build number + chip architecture</em> against an up-to-date installation matrix (such as <a href="https://ios.cfw.guide/installing-trollstore/" target="_blank" rel="noopener noreferrer">ios.cfw.guide</a>) and our <a href="./P04.HTML">TrollStore Installation Guide</a> before downloading any files.</p>
+                <p><strong>Beware of Fake "iOS 18 / iPhone 16" Installers:</strong> Any website or YouTube video claiming to offer a TrollStore IPA or profile installer for iPhone 16 or M4 iPads is distributing configuration profiles (web clips) or adware, not opa334's TrollStore.</p>
             </div>
         </section>
 
-        <!-- 5. How to Check -->
-        <section id="check-device">
-            <h2>How to Check Your Device &amp; Firmware</h2>
+        <!-- 4-Step Device & Build Verification -->
+        <section id="how-to-verify-device">
+            <h2>4-Step Device &amp; Build Verification</h2>
+            <p>Before downloading an installer binary, check these four fields on your device under <strong>Settings &gt; General &gt; About</strong>:</p>
             <ol>
-                <li>Open <strong>Settings &gt; General &gt; About</strong> on your iPhone or iPad.</li>
-                <li>Note the <strong>Model Name</strong> and <strong>Software Version</strong> (tap the version number if you need to inspect the exact build number).</li>
-                <li>Confirm your version is within <code>14.0 beta 2–16.6.1</code>, <code>16.7 RC (20H18)</code>, or <code>17.0</code>.</li>
-                <li>Look up the matching architecture column and installation path for your exact version and device.</li>
+                <li><strong>Confirm Model Name:</strong> Match your device against the iPhone or iPad matrix above to identify whether it is <code>arm64</code> (A8–A11) or <code>arm64e</code> (A12–A17 Pro / M1–M2).</li>
+                <li><strong>Tap "iOS Version" to Reveal the Build Number:</strong> Tapping the version string exposes the parenthetical build code. If your version reads <code>16.7</code>, verify the build is exactly <code>20H18</code> (16.7 RC). Public 16.7 builds (such as <code>20H19</code>) are patched.</li>
+                <li><strong>Match Version to Installer Tool:</strong> Use <code>TrollInstallerX</code> for 14.0b2–16.6.1 (or <code>TrollMisaka</code> on A8), and use <code>TrollRestore</code> (PC/Mac required) for 16.7 RC (<code>20H18</code>), 17.0, or late 15.8.4+ maintenance builds.</li>
+                <li><strong>Verify Official Releases Only:</strong> Obtain TrollStore and installer binaries exclusively from <a href="https://github.com/opa334/TrollStore" target="_blank" rel="noopener noreferrer">github.com/opa334/TrollStore</a> and the <a href="https://ios.cfw.guide/installing-trollstore/" target="_blank" rel="noopener noreferrer">iOS CFW Guide</a>.</li>
             </ol>
         </section>
 
-        <!-- 6. Common Pitfalls -->
-        <section id="common-pitfalls">
-            <h2>Common Device Compatibility Pitfalls</h2>
-            <ul>
-                <li><strong>Confusing "supported device" with "currently supported firmware":</strong> An iPhone 13 or iPhone 15 has compatible hardware, but if it is updated to iOS 17.0.1 or later, TrollStore is not supported on that firmware.</li>
-                <li><strong>Confusing public iOS 16.7 with iOS 16.7 RC (<code>20H18</code>):</strong> Only the <code>20H18</code> RC build is documented as supported; public 16.7 and later 16.7.x releases are excluded.</li>
-                <li><strong>Assuming an IPA or third-party site unlocks newer iOS versions:</strong> No IPA file or unofficial wrapper can restore a patched CoreTrust vulnerability on an unsupported firmware.</li>
-            </ul>
-        </section>
-
-        <!-- 7. FAQ -->
+        <!-- Device-Specific Questions (FAQ) -->
         <section id="faq">
-            <h2>Frequently Asked Questions</h2>
+            <h2>Device-Specific Questions (FAQ)</h2>
 
             <div class="faq-item">
-                <h3>Does TrollStore work on all iPhone models?</h3>
-                <p>No. Support depends on both the installed iOS version and whether a valid installation method applies to that exact firmware and device combination.</p>
+                <h3>Does iPod touch 7th Generation Support TrollStore?</h3>
+                <p>Yes. The <strong>iPod touch (7th generation)</strong> uses the A10 Fusion (<code>arm64</code>) chip and supports iOS 12.3 through iOS 15.8.x. Any unit running <code>iOS 14.0 beta 2</code> through <code>15.8.x</code> is eligible for TrollStore via TrollInstallerX or TrollRestore.</p>
             </div>
 
             <div class="faq-item">
-                <h3>Does TrollStore support iPhone 6s and iPhone 7?</h3>
-                <p>Yes, on eligible iOS 14–15 firmware versions within the documented range. Both belong to the <code>arm64</code> architecture group.</p>
+                <h3>Why Do iPhone 13 and iPhone 14 Have Different Compatibility Windows Despite Both Using the A15 Chip?</h3>
+                <p>Because of their launch dates. The <strong>iPhone 13</strong> launched in September 2021 with <code>iOS 15.0</code>, giving it compatibility across <code>iOS 15.0 – 17.0</code>. The <strong>iPhone 14 and 14 Plus</strong> launched in September 2022 with <code>iOS 16.0</code> preinstalled—they cannot be downgraded to iOS 15, limiting their eligible window to <code>iOS 16.0 – 17.0</code>.</p>
             </div>
 
             <div class="faq-item">
-                <h3>Does TrollStore work on iPhone 15 and iPhone 15 Pro?</h3>
-                <p>Both use <code>arm64e</code> chips, and firmware support applies to <strong>iOS 17.0</strong> rather than iOS 17.0.1 or later versions.</p>
+                <h3>How Can I Tell If a Sealed or Used iPhone 15 Still Has Compatible iOS 17.0?</h3>
+                <p>Only the very first production batch of <strong>iPhone 15 / 15 Pro</strong> units manufactured in September 2023 shipped with <code>iOS 17.0</code>. Apple pushed <code>iOS 17.0.1</code> and <code>17.0.2</code> during launch week, which fixed the CoreTrust bug. Unless a seller can show a screenshot of <strong>Settings &gt; General &gt; About</strong> displaying <code>17.0</code>, assume any sealed or used iPhone 15 is on <code>17.0.1+</code> and incompatible.</p>
             </div>
 
             <div class="faq-item">
-                <h3>Does TrollStore support iPad Pro M4?</h3>
-                <p>No. iPad Pro M4 released after iPadOS 17.0 and is outside TrollStore's documented firmware compatibility range.</p>
+                <h3>Why Are A8 Devices Treated Differently From A9–A11 Devices?</h3>
+                <p>While A8 (iPad mini 4, iPad Air 2) and A9–A11 devices are all <code>arm64</code>, A8 processors use a <strong>4K kernel page size</strong> instead of the 16K page size introduced on the A9. Kernel exploits built specifically for 16K page sizes do not work out of the box on A8 tablets, which is why compatibility matrices list A8 in its own row.</p>
             </div>
 
             <div class="faq-item">
-                <h3>What is the difference between arm64 and arm64e?</h3>
-                <p><code>arm64</code> and <code>arm64e</code> represent different Apple processor generations (for example, A8–A11 in <code>arm64</code> versus A12–A17 Pro and M1/M2 in <code>arm64e</code>), which affect which installation steps apply.</p>
-            </div>
-        </section>
-
-        <!-- 8. Summary & Next Guides -->
-        <section id="summary">
-            <h2>Summary &amp; Next Guides</h2>
-            <p>Start with your exact iOS or iPadOS version and build number, verify that it falls within the supported range, and then confirm the installation route for your device's architecture group.</p>
-
-            <div class="related-links">
-                <a href="./index.html">What Is TrollStore? (Overview &amp; Concepts)</a>
-                <a href="./P05.HTML">TrollStore iOS Compatibility (Versions &amp; Builds)</a>
-                <a href="./P04.HTML">TrollStore Installation Guide (Before You Install)</a>
-                <a href="./P03.HTML">TrollStore Download &amp; Release Verification</a>
+                <h3>Can M4 iPad Pro or iPhone 16 Models Run TrollStore?</h3>
+                <p>No. The <strong>M4 iPad Pro</strong> shipped with <code>iPadOS 17.5</code> and the <strong>iPhone 16 series</strong> shipped with <code>iOS 18.0</code>. Because both devices launched long after Apple patched the CoreTrust vulnerability in <code>iOS 17.0.1</code>, no compatible firmware exists for them.</p>
             </div>
         </section>
     </main>
